@@ -1,0 +1,17 @@
+﻿{
+  "Environments": [
+
+    {
+        "Environment": "DEV",
+
+
+    },
+    {
+        "Environment": "PROD",
+
+    }
+  ],
+
+    "SelectedEnvironment": "DEV"
+    
+}

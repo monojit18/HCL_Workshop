@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4C9395E1-603D-4350-87AD-8F688E1DDEEB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>NativeReferenceApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\NRAAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\NRADummyAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\Command.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\NRAConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\NRASharedApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ErrorBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ModuleAdapterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IDbService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IHttpService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Local\NRAEnvironments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NRADBService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NRADummyService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NRAHttpService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Subsystems\ResourceLoader\CMPResourceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NRAiewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)SharedResources\Environments.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+  </ItemGroup>
+</Project>

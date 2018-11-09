@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{AA4E01CD-C9AE-4D2F-B123-6144139F1873}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FormsReferenceApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\Command.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\FRAConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commons\FRASharedApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Local\FRAEnvironments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Subsystems\ResourceLoader\CMPResourceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FRAHttpService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ErrorBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ModuleAdapterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\BaseClasses\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IDbService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generics\Interfaces\IHttpService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FRADummyService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\FRAAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FRADBService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\FRADummyAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FRAViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Adapters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Generics\" />
+    <Folder Include="$(MSBuildThisFileDirectory)SharedResources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Commons\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Subsystems\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Remote\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)SharedResources\Environments.json" />
+  </ItemGroup>
+</Project>
