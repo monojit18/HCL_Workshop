@@ -11,7 +11,7 @@ namespace TestAppCenter.iOS
 {
     public partial class ViewController : UIViewController
     {
-        int count = 1;
+        int count = 3;
         private HttpClient _httpClient;
 
         public ViewController(IntPtr handle) : base(handle)
